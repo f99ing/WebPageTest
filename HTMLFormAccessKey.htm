@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head runat="server">
+      <title>HTMLFormAccessKey</title>
+  </head>
+  <body>
+	   <FORM action="xx.jsp" method="post">
+		<P>
+			<ul>
+				<li>Pressing an access key assigned to an element gives focus to the element. </li>
+				 
+				<li>The invocation of access keys depends on the underlying system. For instance on Windows alt+accessKey is used</li>
+				<li>The rendering of access keys depends on the user agent</li>
+				
+				<li>When a LABEL element receives focus, it passes the focus on to its associated control.</li>
+			
+
+				<li>
+					<LABEL for="firstname"  accesskey="M">First name(M): </LABEL>
+					<INPUT type="text" id="firstname"><BR>
+				</li>	
+				<li> 
+					this  conflicts with browser(in chrome) short cut key:
+					<LABEL for="firstnameConf"  accesskey="F">First name conflict(F): </LABEL><br>
+					<INPUT type="text" id="firstnameConf"><BR>
+				</li>
+				
+				<li> 
+					press alt+s will submit the form
+					<button type='submit' accesskey='s'>Submit</button>
+				</li>
+			</ul>
+		</P>
+	 </FORM>
+  </body>
+</html>
