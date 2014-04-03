@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head runat="server">
+      <title>HTMLSelect</title>
+  </head>
+  <body>
+	<FORM action="http://somesite.com/prog/component-select" method="post">
+	   <P>
+			size:	   number of rows <br>
+			multiple:	if present,    allows multiple selections, otherwise only permits single selections. <br> <br>
+			Visual user agents are not required to present a SELECT element as a list box; they may use any other mechanism, such as a drop-down menu.<br>
+			
+			with  'multiple' or 'size' set, a SELECT element is presented as a scrolled list box  (in chrome): <br>
+			<SELECT multiple size="4" name="component-select">
+			  <OPTION  value="Component_1_a">Component_1</OPTION>
+			  <OPTION  value="Component_1_b" selected>Component_2</OPTION>
+			  <OPTION value="Component_3" label='lb'>Component_3</OPTION>
+			  <OPTION value="Component_4" selected>Component_4</OPTION>
+			  <OPTION value="Component_5" >Component_5</OPTION>
+			  <OPTION value="Component_6">Component_6</OPTION>
+			 
+			</SELECT>
+			<br>
+			If both 'multiple' and 'size' is omitted, UA will render a drop down list (in chrome):
+			<SELECT   name="component-select">
+			  <OPTION selected value="Component_1_a">Component_1</OPTION>
+			  <OPTION selected value="Component_1_b">Component_2</OPTION>
+			  <OPTION value="Component_3">Component_3</OPTION>
+			  <OPTION value="Component_4">Component_4</OPTION>
+			  <OPTION value="Component_5">Component_5</OPTION>
+			  <OPTION value="Component_6">Component_6</OPTION>
+			</SELECT>
+			<br> <br>
+			option group <br>
+			<SELECT size=19 multiple name="ComOS">
+				<OPTION selected label="none" value="none">None</OPTION>
+				<OPTGROUP label="PortMaster 3">
+					<OPTION label="3.7.1" value="pm3_3.7.1">PortMaster 3 with ComOS 3.7.1</OPTION>
+					<OPTION label="3.7" value="pm3_3.7">PortMaster 3 with ComOS 3.7</OPTION>
+					<OPTION label="3.5" value="pm3_3.5">PortMaster 3 with ComOS 3.5</OPTION>
+				</OPTGROUP>
+				<OPTGROUP label="PortMaster 2">
+					<OPTION label="3.7" value="pm2_3.7">PortMaster 2 with ComOS 3.7</OPTION>
+					<OPTION label="3.5" value="pm2_3.5">PortMaster 2 with ComOS 3.5</OPTION>
+				</OPTGROUP>
+				<OPTGROUP label="IRX">
+					<OPTION label="3.7R" value="IRX_3.7R">IRX with ComOS 3.7R</OPTION>
+					<OPTGROUP label="IRX2">
+						<OPTION label="3.7R" value="IRX_3.7.1R">IRX with ComOS 3.7R</OPTION>
+						<OPTION label="3.5R" value="IRX_3.7.2R">IRX with ComOS 3.5R</OPTION>
+					</OPTGROUP>
+					<OPTION label="3.5R" value="IRX_3.5R">IRX with ComOS 3.5R</OPTION>
+				</OPTGROUP>
+			</SELECT>
+			<br> <br>
+			<INPUT type="submit" value="Send"><INPUT type="reset">
+		</P>
+</FORM>
+  </body>
+</html>
